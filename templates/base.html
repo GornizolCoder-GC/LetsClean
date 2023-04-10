@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <title>LetsClean!</title>
+    <style>
+        .map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+        }
+        .map-container iframe{
+        left:0;
+        top:0;
+        height:80%;
+        width:100%;
+        position:absolute;
+        }
+        .bgblue{
+            background: linear-gradient( rgba(63, 107, 175, 6) , rgba(63, 107, 175, 0.85) 33.94% ), url("https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/banner-background.jpg");
+            background-size: cover;    
+        }
+        .estimate{
+          background: linear-gradient( rgba(63, 107, 175, 6) , rgba(63, 107, 175, 0.85) 33.94% ), url("https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/12/give-estimate-background-image.jpg");
+          background-size: cover; 
+        }
+        .rounded-circle:hover{
+            border-color: #01D0CC;
+            background-color: #01D0CC;
+        }
+        /* .follow i{
+            border: 1px solid white;
+            border-radius: 50%;
+            height: auto;
+            padding: 5px;
+        }
+
+        .header{
+            position: relative;
+        } */
+        img.rotate{
+          transition: ease 1s;
+        }
+        img.rotate:hover{
+          rotate: 10deg;
+        }
+        .checkIcon{
+          color:#01D0CC;
+          font-size: 15px;
+          transition: ease 0.5s;
+        }
+        .checkIcon:hover{
+          color: #2f5fad;
+          font-size: 20px;
+        }
+        .subscribe{
+          border: 0;
+          border-radius: 5px;
+          background-color: #01D0CC;
+          color: #fff;
+        }
+        .subscribe:hover{
+          background-color: #2f5fad;
+        }
+
+        /* start-experts-style */
+        /* img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: top;
+        } */
+.mb-1 {
+    margin-bottom: 0.25rem!important;
+}
+.h5, h5 {
+    font-size: 1.25rem;
+}
+a {
+text-decoration:none;    
+}
+.team-style07 {
+    text-align: center;
+    transition: all .3s ease-in-out
+}
+
+/* .team-style07:hover {
+    background: #292dc2
+} */
+
+/* .team-style07:hover h3 a,
+.team-style07:hover p {
+    color: #fff
+} */
+
+.team-style07 .team-thumb {
+    position: relative
+}
+
+.team-style07 .team-thumb .team-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.team-style07:hover .team-thumb .team-social .styled-icons li:nth-child(1) {
+    left: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    opacity: 1;
+    transition: all .4s ease-in-out 0s
+}
+
+.team-style07 .team-thumb .team-social .styled-icons li:nth-child(1) {
+    position: absolute;
+    opacity: 0;
+    left: -10px;
+    bottom: -20px;
+    z-index: 10;
+    transition: all .3s ease-in-out
+}
+
+.team-style07 .team-thumb .team-social .styled-icons li:nth-child(2) {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    transition: all .3s ease-in-out
+}
+
+.team-style07 .team-thumb .team-social .styled-icons li:nth-child(3) {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    transition: all .3s ease-in-out
+}
+
+.team-style07:hover .team-thumb .team-social .styled-icons li:nth-child(3) {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    opacity: 1;
+    transition: all .4s ease-in-out 0s
+}
+
+.team-style07:hover .team-thumb .team-social .styled-icons li:nth-child(2) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    opacity: 1;
+    transition: all .5s ease-in-out 0s
+}
+
+.team-style07 .team-thumb .team-social .styled-icons li a {
+    background: #3457f1;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: none;
+    font-size: 16px;
+    transition: all .3s ease-in-out
+}
+.mb-1-9, .my-1-9 {
+    margin-bottom: 1.9rem;
+}
+
+.styled-icons a {
+    border: 2px solid transparent;
+    color: #333;
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    line-height: 2;
+    margin-right: 4px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 36px;
+    transition: all .2s ease;
+    border-radius: 50%
+}
+
+.styled-icons li {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-left: 0 !important
+}
+        /* end experts-style */
+
+
+        /* start pricing-style */
+
+        .pricingTable{
+            margin-top:30px;
+            text-align: center;
+            background: #fff;
+            /* position: relative; */
+        }
+        /* .pricingTable .pricing_heading:after{
+            content: "";
+            width: 36px;
+            height: 29.5%;
+            background:#EF476F;
+            position: absolute;
+            top: -1px;
+            right: 0;
+            z-index: 2;
+            transform: skewY(45deg) translateY(18px);
+            transition: all 0.4s ease 0s;
+        } */
+        .pricing_heading{
+          color: #fff;
+          background: #2F5FAD;
+        }
+        .pricingTable .title{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            padding: 15px 0 0;
+            /* margin: 0 35px 0 0; */
+            transition: all 0.4s ease 0s;
+        }
+        .pricingTable .value{
+            display: block;
+            position: relative;
+            font-size: 60px;
+            font-weight: 700;
+            padding: 5px 0 10px;
+            /* margin: 0 35px 0 0; */
+            transition: all 0.4s ease 0s;
+        }
+        /* .pricingTable:hover .title,
+        .pricingTable:hover .value{
+            color: #fff;
+        } */
+        .pricingTable .month{
+            /* display: flex;
+            justify-content: center; */
+            position: absolute;
+            top: 85%;
+            left: 35%;
+            right: 35%;
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 5px;
+            background:#01D0CC;
+            border-radius: 15px;
+        }
+        /* .pricingTable .content{
+            border-left: 1px solid #f2f2f2;
+            position: relative;
+        } */
+        /* .pricingTable .content:after{
+            content: "";
+            width: 35px;
+            height: 100%;
+            background: #f8f8f8;
+            box-shadow: 9px 9px 20px #ddd;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            transform: skewY(-45deg) translateY(-18px);
+            transition: all 0.4s ease 0s;
+        } */
+        .pricingTable .content ul{
+            padding: 0;
+            margin:0;
+            list-style: none;
+            background: #fff;
+        }
+        .pricingTable .content ul li{
+            display: block;
+            font-size: 15px;
+            color: #333;
+            line-height: 23px;
+            padding: 11px 0;      
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .pricingTable .content ul li:hover{
+          color:#01D0CC;
+        }
+        .pricingTable .link{
+            background: #fff;
+            padding: 20px 0;
+            /* margin-right: 35px;
+            border-bottom: 1px solid #f2f2f2; */
+        }
+        .pricingTable .link a{
+            display: inline-block;
+            padding: 15px 25px;
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+            background: #01D0CC;
+            border-radius: 5px;
+            transition: all 0.4s ease 0s;
+        }
+        /* .pricingTable:hover .link a{
+            color: #fff;
+            background: #06D6A0;
+            border: 1px solid #06D6A0;
+        }
+        .pricingTable:hover .pricing_heading:after,
+        .pricingTable:hover .title,
+        .pricingTable:hover .value{
+            background:#06D6A0;
+        }
+        @media only screen and (max-width: 990px){
+            .pricingTable{
+                margin-bottom: 35px;
+            }
+        } */
+
+        /* end pricing-style */
+
+        /* start review-style */
+        
+        /* end review-style */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js
+    "></script>
+</head>
+<body>
+    
+    <div class="position-relative">
+        <nav class="navbar navbar-expand-lg fw-medium fs-6" style="background-color: #152B4F;">
+            <div class="container-fluid container">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-info">
+                      <li class="nav-item">
+                        <span class="nav-link text-light">FOLLOW US:</span>
+                      </li>
+                      <li class="nav-item mt-1">
+                        <a class=" btn btn-outline-light rounded-circle btn-sm" href="#!" role="button"><i class="bi bi-facebook text-light"></i></a>
+                      </li>
+                      <li class="nav-item mx-1 mt-1">
+                        <a class=" btn btn-outline-light rounded-circle btn-sm" href="#"  role="button"><i class="bi bi-twitter text-light"></i></a>
+                      </li>
+                      <li class="nav-item mx-1 mt-1">
+                        <a class=" btn btn-outline-light rounded-circle btn-sm" href="#" role="button"><i class="bi bi-linkedin text-light"></i></a>
+                      </li>
+                      <li class="nav-item mt-1">
+                        <a class=" btn btn-outline-light rounded-circle btn-sm" href="#" role="button"><i class="bi bi-instagram text-light"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" ><i class="bi bi-telephone-fill px-2" style="color:#01D0CC;"></i><span class="text-light">+61 3 8376 6284</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-envelope-fill px-2" style="color:#01D0CC;"></i><span class="text-light">Info@letsclean.com</span></a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+            </div>
+        </nav>
+        
+        <nav class="navbar navbar-expand-lg navbar-light fw-medium fs-6">
+            <div class="container-fluid container">
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                  </li>
+                  <li class="nav-item px-4">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICES</a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    PAGES
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">GALERY</a></li>
+                    <li><a class="dropdown-item" href="#">TESTIMONIAL</a></li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    <li><a class="dropdown-item" href="#">COMING SOON</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item px-4">
+                <a class="nav-link" href="{% url 'blog' %}">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT US</a>
+              </li>
+              </ul>
+            </div>
+            </div>
+          </nav>
+
+          <a class="mx-auto position-absolute top-0 start-50 translate-middle-x" href="#">
+            <img width="250" src="https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/logo.png" alt="Your Logo">
+          </a>
+    </div>  
+    
+      {% block content %}
+      {% endblock %}  
+    
+    <!-- Footer -->
+<footer class="text-center text-lg-start text-muted position-relative">
+    <!-- Section: Social media -->
+    <section class="container justify-content-lg-between px-4 position-absolute" style="background-color:#fff; border-radius: 15px; left:35px; right: 35px;top: -50px;width: 80%;">
+      <!-- Left -->
+      <div class="pt-4 d-none d-lg-block">
+        <div class="row d-flex justify-content-center">
+          <div class="col-1 p-2 d-flex justify-content-center align-self-center">
+            <img src="https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/paperplane-icon.png" alt="telegram">
+          </div>
+          <div class="col-4">
+            <h4 class="m-0 fw-bold">Subscribe To Our Newsletter</h4>
+            <p style="font-size: small;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</p>
+          </div>
+          <div class="col-6 align-self-center">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Email address..." aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary subscribe" type="button" id="button-addon2">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <!-- <div class="container">
+      <div class="row justify-content-md-center"  style="background-color: #fdfdfd;">
+        <div class="col col-lg-2">
+          <img class="" src="https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/paperplane-icon.png" alt="buble">
+        </div>
+        <div class="col-md-auto">
+          <h1>Subscribe To Our Newsletter</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</p>
+        </div>
+        <div class="col col-lg-2">
+          <input type="text">
+          <button class="btn">Subscribe</button>
+        </div>
+      </div>
+    </div> -->
+      <div class="container-fluid text-center text-md-start mx-0 pt-5" style="background-color: #1E1E1E;">
+        <!-- Grid row -->
+        
+        <div class="row mt-3 pb-4 pt-5">
+          <div class="col-md-3 col-lg-2 col-xl-2 px-0 mb-4">
+            <img src="https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/footer-left-bubble.png" alt="buble">
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="fw-medium fs-4 text-white mb-4 border-start border-info border-2 px-2">
+              About Us
+            </h6>
+            <p style="color: #6e6e6e;font-size: 14px;">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="fw-medium fs-4 text-white mb-4 border-start border-info border-2 px-2">
+              Quick links
+            </h6>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">Home</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">About us</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">Services</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">Gallery</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">Blog</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;margin: 0;">
+              <a href="#!" class="text-decoration-none text-reset">Contact us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+            <!-- Links -->
+            <h6 class="fw-medium fs-4 text-white mb-4 border-start border-info border-2 px-2">
+              Get Free Estimate
+            </h6>
+            <p style="color: #01D0CC;font-size: 35px;">
+              <a href="#!" class="text-decoration-none text-reset">+61 3 8376 6284</a>
+            </p>
+            <p style="color: #6e6e6e;font-size: 14px;">
+              Our online scheduling and payment system is safe.
+            </p>
+            <p>
+              <a href="#!" class="btn btn-outline-info rounded-pill" role="button"> <span style="font-size: 15px;">Request With Online Form</span> </a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="fw-medium fs-4 text-white mb-4 border-start border-info border-2 px-2">Work Days</h6>
+            <p style="color: #6e6e6e;font-size: 14px; border-bottom: 1px solid  #6e6e6e; display: inline-block; padding-bottom: 5px;">
+              Mon - sat 09am - 05pm
+            </p>
+            <br>
+            <p style="color: #6e6e6e;font-size: 14px; border-bottom: 1px solid  #6e6e6e; display: inline-block; padding-bottom: 5px;">
+              Sunday <span class="justify-content-end" style="color: #01D0CC;">Closed</span>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 px-0 mb-4 position-relative">
+            <img class="position-absolute bottom-0" src="https://elementorpress.com/templatekit-pro/layout66/wp-content/uploads/2022/11/map-leaf.png" alt="buble">
+          </div>
+          <!-- Grid column -->
+        </div>
+
+      </div>
+    </section>
+  
+    
+    <div class="p-4" style="background-color: #000000;">
+        <div class="container d-flex justify-content-lg-between p-2">
+          <div class="">
+            <a class=" btn btn-outline-light rounded-circle btn-sm" href="#!" role="button"><i class="bi bi-facebook text-light"></i></a>
+            <a class=" btn btn-outline-light rounded-circle btn-sm" href="#"  role="button"><i class="bi bi-twitter text-light"></i></a>
+            <a class=" btn btn-outline-light rounded-circle btn-sm" href="#" role="button"><i class="bi bi-linkedin text-light"></i></a>
+            <a class=" btn btn-outline-light rounded-circle btn-sm" href="#" role="button"><i class="bi bi-instagram text-light"></i></a>
+            
+          </div>
+          <!-- Copyright -->
+          <div class="text-light">
+            © 2021 LetsClean , All Rights Reserved.
+          </div>
+          <!-- Copyright -->
+        </div>
+    </div>
+    
+  </footer>
+  <!-- Footer -->
+</body>
+</html>
